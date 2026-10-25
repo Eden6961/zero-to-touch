@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的第一个网页</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>你好，互联网</h1>
-    <p>这是我的第一个网站，但他现在还是个html文件</p>
-</body>
+  <body>
+    <div class="card">
+      <h1>你好，互联网</h1>
+      <p id="msg">这是我的第一个网页，现在它有了一点样式。</p>
+      <button onclick="changeText()">点我试试</button>
+    </div>
+    <script>
+      function changeText() {
+        document.getElementById('msg').textContent = '你刚刚触发了一段 JavaScript。';
+      }
+    </script>
+  </body>
 </html>
