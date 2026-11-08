@@ -15,12 +15,12 @@ export default function InputCard({ onResult }) {
   async function handleAnalyze() {
     setError("");
 
-    try {
-      const res = await (fetch(`${API}/api/profile`), {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text }),
-      });
+ try {
+  const res = await fetch(`${API}/api/analyze`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text }),
+  });
 
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
